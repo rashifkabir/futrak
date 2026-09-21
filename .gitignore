@@ -1,0 +1,134 @@
+# ─── Secrets ────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p8
+*.p12
+*.keystore
+*.jks
+*.mobileprovision
+google-services.json
+GoogleService-Info.plist
+**/*credentials*.json
+**/*serviceAccount*.json
+
+# ─── Python ─────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ─── Node ───────────────────────────────────────────────────
+node_modules/
+.pnp/
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+
+# ─── Web build output ───────────────────────────────────────
+frontend/dist/
+frontend/build/
+frontend/.vite/
+.vite/
+
+# ─── Expo / React Native ────────────────────────────────────
+.expo/
+.expo-shared/
+mobile/dist/
+mobile/web-build/
+
+# ─── iOS build output ───────────────────────────────────────
+mobile/ios/
+ios/Pods/
+ios/build/
+ios/.xcode.env.local
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+DerivedData/
+*.ipa
+*.dSYM.zip
+
+# ─── Android build output ───────────────────────────────────
+mobile/android/
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+.gradle/
+*.apk
+*.aab
+local.properties
+.cxx/
+
+# ─── Model weights (see README for how to obtain) ───────────
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.task
+*.h5
+*.pb
+*.weights
+*.mlmodel
+*.mlpackage
+models/roboflow_cache/
+
+# ─── Media — NO video or imagery of real people is committed ─
+# Training/test footage and every frame extracted from it stays local.
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.m4v
+*.webm
+*.jpg
+*.jpeg
+*.heic
+*.heif
+/data/
+/models/propathfc_v4/
+frontend/scripts/seed-pitches/.cache/
+# App iconography and UI graphics are people-free — allowed back in:
+!frontend/src/assets/*.png
+!frontend/public/*.svg
+!mobile/assets/*.png
+# Seeded OpenStreetMap pitch data — public map data, no imagery:
+!frontend/public/data/
+
+# ─── Editor / OS ────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+
+# ─── Local scratch ──────────────────────────────────────────
+*.bak
+*.bak[0-9]
+*.py.b
+*.py.bak*
+*.log
+*.db
+
+# ─── Private project notes (not published) ──────────────────
+CLAUDE.md

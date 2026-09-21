@@ -1,0 +1,13 @@
+# EAS Build archives the whole git repo by default. This repo has several
+# GB of CV training data/model weights at the root that the mobile/ app
+# has no dependency on and don't need to travel with every cloud build.
+/backend
+/data
+/models
+/diagnostics
+/frontend
+*.pt
+*.pyc
+__pycache__/
+/*.py
+/requirements.txt

@@ -1,0 +1,23 @@
+.matrix{display:flex; flex-direction:column; gap:8px}
+.mx-row{display:flex; gap:8px}
+.mx-head .mx-cond{
+  flex:1; text-align:center; padding:8px 4px;
+  font-family:'Archivo',sans-serif; font-weight:700; font-size:12px;
+}
+.mx-cond span{display:block; font-family:'Inter'; font-weight:400; font-size:9px; color:var(--muted); margin-top:2px}
+.mx-corner{width:74px; flex-shrink:0}
+.mx-type{
+  width:74px; flex-shrink:0; border-radius:10px; padding:10px 8px;
+  font-family:'Archivo',sans-serif; font-weight:700; font-size:11px;
+  display:flex; align-items:center; line-height:1.1;
+}
+.mx-laces{background:rgba(90,160,224,.16); color:#8fbdec}
+.mx-finesse{background:rgba(143,227,136,.14); color:var(--good)}
+.mx-trivela{background:rgba(232,184,79,.15); color:var(--warn)}
+.mx-cell{
+  flex:1; background:var(--turf2); border:1px solid var(--line);
+  border-radius:10px; padding:12px 6px; text-align:center;
+}
+.mx-score{font-family:'Archivo',sans-serif; font-weight:900; font-size:22px; color:var(--muted2)}
+.mx-att{font-size:9px; color:var(--muted); margin-top:2px}
+.mx-note{font-size:11px; color:var(--muted); margin-top:14px; line-height:1.6}

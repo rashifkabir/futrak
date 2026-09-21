@@ -1,0 +1,98 @@
+.pmap{
+  position:relative; width:100%; aspect-ratio:4/5;
+  border-radius:16px; overflow:hidden; border:1px solid var(--line);
+  background:var(--turf2);
+}
+
+/* Leaflet's own UI chrome (zoom control, attribution) stays close to its
+   defaults — it's a real map now, floating on its own light basemap, not
+   themed to match the dark app chrome around it. */
+.leaflet-crown-icon{display:flex; align-items:center; justify-content:center;}
+
+/* The basemap tiles are pre-rendered PNGs from CARTO — there's no separate
+   "park" layer to restyle, so a saturation/brightness push on the whole
+   tile layer is what's actually achievable here (not a true per-feature
+   outline glow, which would need vector tiles). This mainly reads as
+   richer, darker greens since parks are the most saturated thing Positron
+   renders to begin with — roads/water are already near-white/pale blue,
+   so they shift far less. */
+.leaflet-tile-pane{filter:saturate(2.4) brightness(0.88) contrast(1.1);}
+
+.pin-tooltip.leaflet-tooltip{
+  background:var(--turf3) !important; color:var(--chalk) !important;
+  border-radius:8px !important; padding:4px 7px !important;
+  text-align:center; line-height:1.25; box-shadow:none !important;
+  border:1.5px solid var(--line) !important; font-family:inherit;
+}
+.pin-tooltip.leaflet-tooltip-top:before{border-top-color:var(--turf3) !important;}
+
+.pin-name{
+  display:block; font-family:'Archivo',sans-serif; font-weight:700;
+  font-size:10px; color:var(--chalk); white-space:normal; max-width:110px;
+}
+.pin-holder{display:block; font-size:9px; color:var(--muted); margin-top:1px;}
+.pin-unverified-badge{
+  display:inline-block; margin-left:4px; font-size:7px; font-weight:800;
+  text-transform:uppercase; letter-spacing:.04em; color:var(--warn);
+  border:1px solid var(--warn); border-radius:4px; padding:1px 3px; vertical-align:middle;
+}
+.pin-nearest-badge-inline{
+  display:block; background:var(--paint); color:#14210a; font-family:'Archivo',sans-serif;
+  font-weight:800; font-size:8px; text-transform:uppercase; letter-spacing:.05em;
+  padding:1px 6px; border-radius:6px; margin-bottom:2px;
+}
+
+.pin-tooltip-mine.leaflet-tooltip{border-color:var(--paint) !important;}
+.pin-tooltip-mine .pin-holder{color:var(--paint)}
+
+.pin-tooltip-lost.leaflet-tooltip{border-color:var(--clay) !important;}
+.pin-tooltip-lost .pin-holder{color:var(--clay)}
+
+.pin-tooltip-other.leaflet-tooltip{border-color:var(--muted2) !important;}
+
+.pin-tooltip-unclaimed.leaflet-tooltip{border-color:var(--muted2) !important; border-style:dashed !important;}
+.pin-tooltip-unclaimed .pin-holder{color:var(--muted2)}
+
+/* Tap-to-open popup for every pin that isn't always-labeled (see
+   Pitches.tsx) — same dark-card look as the permanent tooltips above,
+   just on Leaflet's popup DOM structure instead of its tooltip one. */
+.pin-popup .leaflet-popup-content-wrapper{
+  background:var(--turf3); color:var(--chalk); border-radius:8px;
+  border:1.5px solid var(--line); box-shadow:0 4px 14px rgba(0,0,0,.45);
+}
+.pin-popup .leaflet-popup-tip{background:var(--turf3);}
+.pin-popup .leaflet-popup-content{margin:8px 10px; text-align:center; line-height:1.25;}
+.pin-popup .leaflet-popup-close-button{color:var(--muted) !important;}
+
+.pin-tooltip-mine.pin-popup .leaflet-popup-content-wrapper{border-color:var(--paint);}
+.pin-tooltip-lost.pin-popup .leaflet-popup-content-wrapper{border-color:var(--clay);}
+.pin-tooltip-other.pin-popup .leaflet-popup-content-wrapper{border-color:var(--muted2);}
+.pin-tooltip-unclaimed.pin-popup .leaflet-popup-content-wrapper{border-color:var(--muted2); border-style:dashed;}
+
+.pin-popup-view{
+  display:block; width:100%; margin-top:6px; padding:5px 0;
+  background:var(--paint); color:#14210a; font-family:'Archivo',sans-serif;
+  font-weight:800; font-size:10px; text-transform:uppercase; letter-spacing:.03em;
+  border-radius:6px;
+}
+
+.pmap-legend{
+  display:flex; flex-wrap:wrap; gap:12px 16px; margin-top:14px;
+}
+.pmap-legend-item{
+  display:flex; align-items:center; gap:6px; font-size:11px; color:var(--muted);
+}
+.pmap-swatch{width:11px; height:11px; border-radius:3px; border:1.5px solid; flex-shrink:0;}
+.pmap-swatch-mine{border-color:var(--paint); background:rgba(232,255,79,.18);}
+.pmap-swatch-lost{border-color:var(--clay); background:rgba(201,104,62,.18);}
+.pmap-swatch-other{border-color:var(--muted2); background:transparent;}
+.pmap-swatch-unclaimed{border-color:var(--muted2); border-style:dashed; background:transparent;}
+.pmap-swatch-you{border-color:var(--paint); border-radius:50%; background:var(--chalk);}
+
+.pmap-note{font-size:11.5px; color:var(--muted2); margin-top:12px; line-height:1.5;}
+
+.geo-banner{margin-bottom:14px;}
+.geo-banner-alert .card-t{color:var(--clay);}
+.geo-retry{margin-top:10px;}
+
+.add-pitch-btn{width:100%; justify-content:center; margin-top:14px;}

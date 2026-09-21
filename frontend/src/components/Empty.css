@@ -1,0 +1,13 @@
+.empty{
+  border:1px dashed var(--line); border-radius:14px;
+  padding:26px 20px; text-align:center; color:var(--muted);
+}
+.empty-mark{
+  font-family:'Archivo',sans-serif; font-weight:900; font-size:32px;
+  color:var(--muted2); line-height:1;
+}
+.empty-title{
+  font-family:'Archivo',sans-serif; font-weight:700; color:var(--chalk);
+  font-size:15px; margin-top:8px;
+}
+.empty-body{font-size:12.5px; margin-top:6px; line-height:1.5; max-width:30ch; margin-inline:auto}

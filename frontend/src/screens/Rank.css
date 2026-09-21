@@ -1,0 +1,8 @@
+.tabs{display:flex; gap:7px; margin-bottom:8px}
+.tab{
+  flex:1; padding:9px 4px; border-radius:10px; background:var(--turf2);
+  border:1px solid var(--line); color:var(--muted);
+  font-family:'Archivo',sans-serif; font-weight:700; font-size:11px;
+  text-transform:uppercase; letter-spacing:.03em;
+}
+.tab.on{background:var(--paint); color:#14210a; border-color:var(--paint)}

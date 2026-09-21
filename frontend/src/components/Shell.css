@@ -1,0 +1,62 @@
+.shell{
+  max-width:var(--shell-max); margin:0 auto; min-height:100vh;
+  background:var(--turf); display:flex; flex-direction:column;
+  position:relative; box-shadow:0 0 60px rgba(0,0,0,.5);
+}
+.shell-body{flex:1; padding:0 0 84px}
+.screen-hd{
+  padding:22px 20px 18px; border-bottom:1px solid var(--line2);
+  background:var(--turf3);
+}
+.screen-eyebrow{
+  font-family:'Archivo',sans-serif; font-weight:700; text-transform:uppercase;
+  letter-spacing:.14em; font-size:10px; color:var(--paint);
+}
+.screen-title{font-size:26px; margin-top:4px}
+.screen-pad{padding:18px 20px}
+.sect-label{
+  font-family:'Archivo',sans-serif; font-weight:700; text-transform:uppercase;
+  letter-spacing:.08em; font-size:11px; color:var(--muted); margin:22px 0 12px;
+}
+.sect-label:first-child{margin-top:6px}
+
+.card{
+  background:var(--turf2); border:1px solid var(--line); border-radius:14px;
+  padding:15px; margin-bottom:10px;
+}
+.card-k{
+  font-family:'Archivo',sans-serif; font-weight:700; text-transform:uppercase;
+  letter-spacing:.06em; font-size:10px; color:var(--muted);
+}
+.card-t{font-family:'Archivo',sans-serif; font-weight:700; font-size:16px; margin-top:3px}
+.card-d{font-size:12.5px; color:var(--muted); margin-top:4px; line-height:1.5}
+
+.btn{
+  display:inline-flex; align-items:center; gap:7px;
+  background:var(--paint); color:#14210a; font-family:'Archivo',sans-serif;
+  font-weight:800; font-size:13px; padding:11px 18px; border-radius:22px;
+  text-transform:uppercase; letter-spacing:.03em;
+}
+.btn-ghost{
+  background:transparent; border:1.5px solid var(--line);
+  color:var(--chalk); padding:9px 16px;
+}
+.btn:disabled{opacity:.4}
+
+/* bottom nav */
+.nav{
+  position:fixed; bottom:0; left:50%; transform:translateX(-50%);
+  width:100%; max-width:var(--shell-max);
+  display:flex; background:var(--turf3); border-top:1px solid var(--line);
+  padding:8px 6px calc(8px + env(safe-area-inset-bottom));
+}
+.nav button{
+  flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;
+  padding:6px 0; color:var(--muted2);
+}
+.nav button.on{color:var(--paint)}
+.nav-ico{width:22px;height:22px}
+.nav-lab{
+  font-family:'Archivo',sans-serif; font-weight:700; font-size:9px;
+  text-transform:uppercase; letter-spacing:.05em;
+}

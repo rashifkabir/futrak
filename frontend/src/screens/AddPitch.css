@@ -1,0 +1,18 @@
+.pd-back{
+  color:var(--muted); font-family:'Archivo',sans-serif; font-weight:700;
+  font-size:11px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:10px;
+  background:none;
+}
+
+.add-pitch-input{
+  width:100%; margin-top:8px; padding:11px 13px; border-radius:10px;
+  background:var(--turf3); border:1.5px solid var(--line); color:var(--chalk);
+  font-size:14px; font-family:inherit;
+}
+.add-pitch-input::placeholder{color:var(--muted2);}
+
+.add-pitch-coords{margin-top:10px;}
+
+.add-pitch-note{font-size:11.5px; color:var(--muted2); margin-top:10px; line-height:1.5;}
+
+.add-pitch-override{margin-top:8px;}

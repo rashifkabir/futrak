@@ -1,0 +1,21 @@
+# Core pipeline — pose, ball detection, scoring, API
+mediapipe
+opencv-python-headless==4.9.0.80
+numpy==1.26.4
+scipy==1.13.1
+onnxruntime==1.18.0
+python-dotenv==1.0.1
+
+# API layer
+fastapi==0.111.0
+uvicorn==0.29.0
+python-multipart==0.0.9
+aiofiles==23.2.1
+
+# Optional — see README:
+#   anthropic   natural-language coaching feedback (ai_feedback.py, coaching_llm.py)
+#   ultralytics training / re-export of the ball+goalpost detector
+#   inference   Roboflow hosted inference; the local ONNX path replaces it
+# anthropic
+# ultralytics
+# inference
